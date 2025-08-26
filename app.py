@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.options import Options
 import pymysql # 新增資料庫連線函式庫
 
 app = Flask(__name__)
@@ -54,7 +55,8 @@ def setup_driver():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
+   ## options.add_argument('--disable-dev-shm-usage')
+    ##options.binary_location = '/usr/bin/chromium-browser'
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
     driver.set_window_size(1200, 900)
