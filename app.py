@@ -53,10 +53,12 @@ def save_user_to_db(line_user_id, student_id):
 # 強制使用 headless 模式，避免 server-side 啟動 GUI 無法顯示
 def setup_driver():
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_argument('--no-sandbox')
-   ## options.add_argument('--disable-dev-shm-usage')
-    ##options.binary_location = '/usr/bin/chromium-browser'
+    options = Options()
+    options.binary_location = "/usr/bin/chromium"
+    options.add_argument("--headless")            # 如需無頭
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
     driver.set_window_size(1200, 900)
