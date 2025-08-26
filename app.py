@@ -17,10 +17,10 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s:%(message)s')
 def save_user_to_db(line_user_id, student_id):
     db_config = {
-        'host': '125.229.195.9',
-        'user': 'login',
-        'password': 'Applepie1512',
-        'db': 'login_system',
+        'host': os.getenv('DB_HOST'),
+        'user': os.getenv('DB_USER'),
+        'password': os.getenv('DB_PASSWORD'),
+        'db': os.getenv('DB_NAME'),
         'charset': 'utf8mb4',
         'cursorclass': pymysql.cursors.DictCursor
     }
