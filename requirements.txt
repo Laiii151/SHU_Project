@@ -3,3 +3,5 @@ selenium
 webdriver_manager
 pymysql
 gunicorn
+Chromium
+Options
