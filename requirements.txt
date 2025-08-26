@@ -2,3 +2,4 @@ flask
 selenium
 webdriver_manager
 pymysql
+gunicorn
