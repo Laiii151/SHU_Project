@@ -150,6 +150,11 @@ def handle_login_request():
                 return jsonify({"success": False, "message": "Login successful, but database save failed"})
     return jsonify({"success": success, "message": message})
 
+@app.route('/')
+def home():
+    return "Flask API is running"
+
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
 
