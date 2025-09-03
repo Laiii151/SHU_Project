@@ -15,55 +15,52 @@ app = Flask(__name__)
 
 # 設定 log 方便 debug
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s:%(message)s')
+
+# 強制使用 headless 模式，避免 server-side 啟動 GUI 無法顯示
+def setup_driver():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
+    driver.set_window_size(1200, 900)
+    driver.implicitly_wait(3)
+    return driver
+
 def save_user_to_db(line_user_id, student_id):
     db_config = {
-        'host': os.getenv('DB_HOST'),
-        'user': os.getenv('DB_USER'),
-        'password': os.getenv('DB_PASSWORD'),
-        'db': os.getenv('DB_NAME'),
+        'host': '127.0.0.1',
+        'user': 'root',
+        'password': 'Applepie151',
+        'db': 'login_system',
         'charset': 'utf8mb4',
         'cursorclass': pymysql.cursors.DictCursor
     }
     try:
         connection = pymysql.connect(**db_config)
         with connection.cursor() as cursor:
-            # 假設資料表叫 users，欄位為 line_user_id 與 student_id
             sql = """
                 INSERT INTO users (line_user_id, student_id) 
                 VALUES (%s, %s)
                 ON DUPLICATE KEY UPDATE student_id=VALUES(student_id)
             """
             cursor.execute(sql, (line_user_id, student_id))
-            connection.commit()  # 必須 commit 才會寫入資料庫
+            connection.commit()
+        logging.info(f"成功寫入資料庫：line_user_id={line_user_id}, student_id={student_id}")
         return True
     except pymysql.err.OperationalError as e:
-        print(f"資料庫連線錯誤：{e}")
+        logging.error(f"資料庫連線錯誤：{e}")
         return False
     except pymysql.err.IntegrityError as e:
-        print(f"資料完整性錯誤：{e}")
+        logging.error(f"資料完整性錯誤：{e}")
         return False
     except Exception as e:
-        print(f"資料庫操作失敗：{e}")
+        logging.error(f"資料庫操作失敗：{e}")
         return False
     finally:
         if 'connection' in locals() and connection.open:
             connection.close()
-
-
-# 強制使用 headless 模式，避免 server-side 啟動 GUI 無法顯示
-def setup_driver():
-    options = webdriver.ChromeOptions()
-    options = Options()
-    options.binary_location = "/usr/bin/chromium"
-    options.add_argument("--headless")            # 如需無頭
-    options.add_argument("--disable-gpu")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    driver.set_window_size(1200, 900)
-    driver.implicitly_wait(3)
-    return driver
 
 def login_verification(driver, username, password):
     start_url = "https://www.shu.edu.tw/System-info.aspx"
@@ -106,9 +103,10 @@ def login_verification(driver, username, password):
             login_button.click()
         except Exception:
             driver.execute_script("arguments[0].click();", login_button)
-        logging.info("Clicked login button")
 
         driver.implicitly_wait(3)
+
+        # 檢查是否顯示「登入帳號或密碼錯誤！」的紅字訊息
         try:
             error_element = driver.find_element(By.ID, "lblMessage")
             if error_element.is_displayed() and "錯誤" in error_element.text:
@@ -119,6 +117,7 @@ def login_verification(driver, username, password):
         # 如果順利跳轉到首頁
         wait.until(EC.url_contains("ap4.shu.edu.tw/STU1/Index.aspx"))
         return True, "登入成功！"
+    
 
     except TimeoutException:
         return False, "登入逾時或帳號密碼錯誤！"
@@ -130,11 +129,13 @@ def login_verification(driver, username, password):
         logging.critical(msg)
         return False, msg
 
+
 @app.route('/login', methods=['POST'])
 def handle_login_request():
     data = request.get_json()
     username = data.get('username')
     password = data.get('password')
+    line_user_id = data.get('line_user_id', '')  # 若有 LINE user ID 可傳入
     if not username or not password:
         return jsonify({"success": False, "message": "Missing required parameters"}), 400
 
@@ -143,20 +144,15 @@ def handle_login_request():
         success, message = login_verification(driver, username, password)
     finally:
         driver.quit()
-        if success:
-            line_user_id = data.get('line_user_id')
-            db_success = save_user_to_db(line_user_id, username)
-            if db_success:
-                return jsonify({"success": True, "message": "Login and binding successful"})
-            else:
-                return jsonify({"success": False, "message": "Login successful, but database save failed"})
-    return jsonify({"success": success, "message": message})
-
-@app.route('/')
-def home():
-    return "Flask API is running"
-
+    if success:
+        # 登入成功才嘗試寫入資料庫
+        if line_user_id:
+            saved = save_user_to_db(line_user_id, username)
+            if not saved:
+                logging.warning("寫入資料庫失敗")
+        return jsonify({"success": True, "message": message})
+    else:
+        return jsonify({"success": False, "message": message})
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(host='0.0.0.0', port=5000, debug=True)
