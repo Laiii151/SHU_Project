@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\SHU_Project\Mainreptile\schedule_scraper.py", line 483, in <module>
+    main()
+  File "C:\SHU_Project\Mainreptile\schedule_scraper.py", line 439, in main
+    print("\U0001f680 啟動：只抓清單一 + 截圖清單二")
+UnicodeEncodeError: 'cp950' codec can't encode character '\U0001f680' in position 0: illegal multibyte sequence

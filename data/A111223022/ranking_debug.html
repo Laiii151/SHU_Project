@@ -1,0 +1,248 @@
+<html class="jf-active"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=11">
+		<title>歷年成績名次查詢</title>
+		<meta content="Web Application System Builder,Http://www.assota.com.tw" name="Web Application System Builder">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<link href="../Styles/wasb.css" type="text/css" rel="stylesheet">
+	<style type="text/css">
+.fa-icon {
+  display: inline-block;
+  fill: currentColor;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.fa-icon > g {
+  transform-origin: 50% 50%;
+}
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+.fa-flip-both {
+  transform: scale(-1, -1);
+}
+.fa-spin > g {
+  animation: fa-spin 1s 0s infinite linear;
+}
+.fa-pulse > g {
+  animation: fa-spin 1s infinite steps(8);
+}
+.fa-inverse {
+  color: #fff;
+}
+@keyframes fa-spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+</style><style type="text/css">.vc-checkerboard{background-size:contain;bottom:0;left:0;position:absolute;right:0;top:0}</style><style type="text/css">.vc-alpha,.vc-alpha-checkboard-wrap{bottom:0;left:0;position:absolute;right:0;top:0}.vc-alpha-checkboard-wrap{overflow:hidden}.vc-alpha-gradient{bottom:0;left:0;position:absolute;right:0;top:0}.vc-alpha-container{cursor:pointer;height:100%;margin:0 3px;position:relative;z-index:2}.vc-alpha-pointer{position:absolute;z-index:2}.vc-alpha-picker{background:#fff;border-radius:1px;box-shadow:0 0 2px rgba(0,0,0,.6);cursor:pointer;height:8px;margin-top:1px;transform:translateX(-2px);width:4px}</style><style type="text/css">.vc-editable-input{position:relative}.vc-input__input{border:0;outline:none;padding:0}.vc-input__label{text-transform:capitalize}</style><style type="text/css">.vc-saturation,.vc-saturation--black,.vc-saturation--white{bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.vc-saturation--white{background:linear-gradient(90deg,#fff,hsla(0,0%,100%,0))}.vc-saturation--black{background:linear-gradient(0deg,#000,transparent)}.vc-saturation-pointer{cursor:pointer;position:absolute}.vc-saturation-circle{border-radius:50%;box-shadow:0 0 0 1.5px #fff,inset 0 0 1px 1px rgba(0,0,0,.3),0 0 1px 2px rgba(0,0,0,.4);cursor:head;height:4px;transform:translate(-2px,-2px);width:4px}</style><style type="text/css">.vc-hue{border-radius:2px;bottom:0;left:0;position:absolute;right:0;top:0}.vc-hue--horizontal{background:linear-gradient(90deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.vc-hue--vertical{background:linear-gradient(0deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.vc-hue-container{cursor:pointer;height:100%;margin:0 2px;position:relative}.vc-hue-pointer{position:absolute;z-index:2}.vc-hue-picker{background:#fff;border-radius:1px;box-shadow:0 0 2px rgba(0,0,0,.6);cursor:pointer;height:8px;margin-top:1px;transform:translateX(-2px);width:4px}</style><style type="text/css">.vc-chrome{background:#fff;background-color:#fff;border-radius:2px;box-shadow:0 0 2px rgba(0,0,0,.3),0 4px 8px rgba(0,0,0,.3);box-sizing:initial;font-family:Menlo;width:225px}.vc-chrome-controls{display:flex}.vc-chrome-color-wrap{position:relative;width:36px}.vc-chrome-active-color{border-radius:15px;height:30px;overflow:hidden;position:relative;width:30px;z-index:1}.vc-chrome-color-wrap .vc-checkerboard{background-size:auto;border-radius:15px;height:30px;width:30px}.vc-chrome-sliders{flex:1}.vc-chrome-fields-wrap{display:flex;padding-top:16px}.vc-chrome-fields{display:flex;flex:1;margin-left:-6px}.vc-chrome-field{padding-left:6px;width:100%}.vc-chrome-toggle-btn{position:relative;text-align:right;width:32px}.vc-chrome-toggle-icon{cursor:pointer;margin-right:-4px;margin-top:12px;position:relative;z-index:2}.vc-chrome-toggle-icon-highlight{background:#eee;border-radius:4px;height:28px;left:12px;position:absolute;top:10px;width:24px}.vc-chrome-hue-wrap{margin-bottom:8px}.vc-chrome-alpha-wrap,.vc-chrome-hue-wrap{height:10px;position:relative}.vc-chrome-alpha-wrap .vc-alpha-gradient,.vc-chrome-hue-wrap .vc-hue{border-radius:2px}.vc-chrome-alpha-wrap .vc-alpha-picker,.vc-chrome-hue-wrap .vc-hue-picker{background-color:#f8f8f8;border-radius:6px;box-shadow:0 1px 4px 0 rgba(0,0,0,.37);height:12px;transform:translate(-6px,-2px);width:12px}.vc-chrome-body{background-color:#fff;padding:16px 16px 12px}.vc-chrome-saturation-wrap{border-radius:2px 2px 0 0;overflow:hidden;padding-bottom:55%;position:relative;width:100%}.vc-chrome-saturation-wrap .vc-saturation-circle{height:12px;width:12px}.vc-chrome-fields .vc-input__input{border:none;border-radius:2px;box-shadow:inset 0 0 0 1px #dadada;color:#333;font-size:11px;height:21px;text-align:center;width:100%}.vc-chrome-fields .vc-input__label{color:#969696;display:block;font-size:11px;line-height:11px;margin-top:12px;text-align:center;text-transform:uppercase}.vc-chrome__disable-alpha .vc-chrome-active-color{height:18px;width:18px}.vc-chrome__disable-alpha .vc-chrome-color-wrap{width:30px}.vc-chrome__disable-alpha .vc-chrome-hue-wrap{margin-bottom:4px;margin-top:4px}</style><style type="text/css">.vc-compact{background-color:#fff;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16);box-sizing:border-box;padding-left:5px;padding-top:5px;width:245px}.vc-compact-colors{margin:0;overflow:hidden;padding:0}.vc-compact-color-item{cursor:pointer;float:left;height:15px;list-style:none;margin-bottom:5px;margin-right:5px;position:relative;width:15px}.vc-compact-color-item--white{box-shadow:inset 0 0 0 1px #ddd}.vc-compact-color-item--white .vc-compact-dot{background:#000}.vc-compact-dot{background:#fff;border-radius:50%;bottom:5px;left:5px;opacity:1;position:absolute;right:5px;top:5px}</style><style type="text/css">.vc-grayscale{background-color:#fff;border-radius:2px;box-shadow:0 2px 15px rgba(0,0,0,.12),0 2px 10px rgba(0,0,0,.16);width:125px}.vc-grayscale-colors{border-radius:2px;margin:0;overflow:hidden;padding:0}.vc-grayscale-color-item{cursor:pointer;float:left;height:25px;list-style:none;position:relative;width:25px}.vc-grayscale-color-item--white .vc-grayscale-dot{background:#000}.vc-grayscale-dot{background:#fff;border-radius:50%;height:6px;left:50%;margin:-3px 0 0 -2px;opacity:1;position:absolute;top:50%;width:6px}</style><style type="text/css">.vc-material{background-color:#fff;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16);font-family:Roboto;height:98px;padding:16px;position:relative;width:98px}.vc-material .vc-input__input{color:#333;font-size:15px;height:30px;margin-top:12px;width:100%}.vc-material .vc-input__label{color:#999;font-size:11px;left:0;position:absolute;text-transform:capitalize;top:0}.vc-material-hex{border-bottom-style:solid;border-bottom-width:2px}.vc-material-split{display:flex;margin-right:-10px;padding-top:11px}.vc-material-third{flex:1;padding-right:10px}</style><style type="text/css">.vc-photoshop{background:#dcdcdc;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 8px 16px rgba(0,0,0,.15);box-sizing:initial;font-family:Roboto;width:513px}.vc-photoshop__disable-fields{width:390px}.vc-ps-head{background-image:linear-gradient(-180deg,#f0f0f0,#d4d4d4);border-bottom:1px solid #b1b1b1;border-radius:4px 4px 0 0;box-shadow:inset 0 1px 0 0 hsla(0,0%,100%,.2),inset 0 -1px 0 0 rgba(0,0,0,.02);color:#4d4d4d;font-size:13px;height:23px;line-height:24px;text-align:center}.vc-ps-body{display:flex;padding:15px}.vc-ps-saturation-wrap{border:2px solid #b3b3b3;border-bottom-color:#f0f0f0;height:256px;overflow:hidden;position:relative;width:256px}.vc-ps-saturation-wrap .vc-saturation-circle{height:12px;width:12px}.vc-ps-hue-wrap{border:2px solid #b3b3b3;border-bottom-color:#f0f0f0;height:256px;margin-left:10px;width:19px}.vc-ps-hue-pointer,.vc-ps-hue-wrap{position:relative}.vc-ps-hue-pointer--left,.vc-ps-hue-pointer--right{border-color:transparent transparent transparent #555;border-style:solid;border-width:5px 0 5px 8px;height:0;position:absolute;width:0}.vc-ps-hue-pointer--left:after,.vc-ps-hue-pointer--right:after{border-color:transparent transparent transparent #fff;border-style:solid;border-width:4px 0 4px 6px;content:"";height:0;left:1px;position:absolute;top:1px;transform:translate(-8px,-5px);width:0}.vc-ps-hue-pointer--left{transform:translate(-13px,-4px)}.vc-ps-hue-pointer--right{transform:translate(20px,-4px) rotate(180deg)}.vc-ps-controls{display:flex;margin-left:10px;width:180px}.vc-ps-controls__disable-fields{width:auto}.vc-ps-actions{flex:1;margin-left:20px}.vc-ps-ac-btn{background-image:linear-gradient(-180deg,#fff,#e6e6e6);border:1px solid #878787;border-radius:2px;box-shadow:0 1px 0 0 #eaeaea;color:#000;cursor:pointer;font-size:14px;height:20px;line-height:20px;margin-bottom:10px;text-align:center}.vc-ps-previews{width:60px}.vc-ps-previews__swatches{border:1px solid #b3b3b3;border-bottom-color:#f0f0f0;margin-bottom:2px;margin-top:1px}.vc-ps-previews__pr-color{box-shadow:inset 1px 0 0 #000,inset -1px 0 0 #000,inset 0 1px 0 #000;height:34px}.vc-ps-previews__label{color:#000;font-size:14px;text-align:center}.vc-ps-fields{padding-bottom:9px;padding-top:5px;position:relative;width:80px}.vc-ps-fields .vc-input__input{border:1px solid #888;box-shadow:inset 0 1px 1px rgba(0,0,0,.1),0 1px 0 0 #ececec;font-size:13px;height:18px;margin-bottom:5px;margin-left:40%;margin-right:10px;padding-left:3px;width:40%}.vc-ps-fields .vc-input__desc,.vc-ps-fields .vc-input__label{font-size:13px;height:18px;line-height:22px;position:absolute;text-transform:uppercase;top:0}.vc-ps-fields .vc-input__label{left:0;width:34px}.vc-ps-fields .vc-input__desc{right:0;width:0}.vc-ps-fields__divider{height:5px}.vc-ps-fields__hex .vc-input__input{border:1px solid #888;box-shadow:inset 0 1px 1px rgba(0,0,0,.1),0 1px 0 0 #ececec;font-size:13px;height:18px;margin-bottom:6px;margin-left:20%;padding-left:3px;width:80%}.vc-ps-fields__hex .vc-input__label{font-size:13px;height:18px;left:0;line-height:22px;position:absolute;text-transform:uppercase;top:0;width:14px}</style><style type="text/css">.vc-sketch{background:#fff;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 8px 16px rgba(0,0,0,.15);box-sizing:initial;padding:10px 10px 0;position:relative;width:200px}.vc-sketch-saturation-wrap{overflow:hidden;padding-bottom:75%;position:relative;width:100%}.vc-sketch-controls{display:flex}.vc-sketch-sliders{flex:1;padding:4px 0}.vc-sketch-sliders .vc-alpha-gradient,.vc-sketch-sliders .vc-hue{border-radius:2px}.vc-sketch-alpha-wrap,.vc-sketch-hue-wrap{height:10px;position:relative}.vc-sketch-alpha-wrap{margin-top:4px;overflow:hidden}.vc-sketch-color-wrap{border-radius:3px;height:24px;margin-left:4px;margin-top:4px;position:relative;width:24px}.vc-sketch-active-color{border-radius:2px;bottom:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15),inset 0 0 4px rgba(0,0,0,.25);left:0;position:absolute;right:0;top:0;z-index:2}.vc-sketch-color-wrap .vc-checkerboard{background-size:auto}.vc-sketch-field{display:flex;padding-top:4px}.vc-sketch-field .vc-input__input{border:none;box-shadow:inset 0 0 0 1px #ccc;font-size:10px;padding:4px 0 3px 10%;width:90%}.vc-sketch-field .vc-input__label{color:#222;display:block;font-size:11px;padding-bottom:4px;padding-top:3px;text-align:center;text-transform:capitalize}.vc-sketch-field--single{flex:1;padding-left:6px}.vc-sketch-field--double{flex:2}.vc-sketch-presets{border-top:1px solid #eee;margin-left:-10px;margin-right:-10px;padding-left:10px;padding-top:10px}.vc-sketch-presets-color{cursor:pointer;display:inline-block;height:16px;margin:0 10px 10px 0;overflow:hidden;position:relative;vertical-align:top;width:16px}.vc-sketch-presets-color,.vc-sketch-presets-color .vc-checkerboard{border-radius:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}.vc-sketch__disable-alpha .vc-sketch-color-wrap{height:10px}</style><style type="text/css">.vc-slider{position:relative;width:410px}.vc-slider-hue-warp{height:12px;position:relative}.vc-slider-hue-warp .vc-hue-picker{background-color:#f8f8f8;border-radius:6px;box-shadow:0 1px 4px 0 rgba(0,0,0,.37);height:14px;transform:translate(-7px,-2px);width:14px}.vc-slider-swatches{display:flex;margin-top:20px}.vc-slider-swatch{flex:1;margin-right:1px;width:20%}.vc-slider-swatch:first-child{margin-right:1px}.vc-slider-swatch:first-child .vc-slider-swatch-picker{border-radius:2px 0 0 2px}.vc-slider-swatch:last-child{margin-right:0}.vc-slider-swatch:last-child .vc-slider-swatch-picker{border-radius:0 2px 2px 0}.vc-slider-swatch-picker{cursor:pointer;height:12px}.vc-slider-swatch:nth-child(n) .vc-slider-swatch-picker.vc-slider-swatch-picker--active{border-radius:3.6px/2px;transform:scaleY(1.8)}.vc-slider-swatch-picker--white{box-shadow:inset 0 0 0 1px #ddd}.vc-slider-swatch-picker--active.vc-slider-swatch-picker--white{box-shadow:inset 0 0 0 .6px #ddd}</style><style type="text/css">.vc-swatches{background-color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.16);height:240px;overflow-y:scroll;width:320px}.vc-swatches-box{overflow:hidden;padding:16px 0 6px 16px}.vc-swatches-color-group{float:left;margin-right:10px;padding-bottom:10px;width:40px}.vc-swatches-color-it{background:#880e4f;-ms-border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0;-o-border-radius:2px 2px 0 0;-webkit-border-radius:2px 2px 0 0;border-radius:2px 2px 0 0;box-sizing:border-box;cursor:pointer;height:24px;margin-bottom:1px;overflow:hidden;width:40px}.vc-swatches-color--white{border:1px solid #ddd}.vc-swatches-pick{fill:#fff;display:block;margin-left:8px}.vc-swatches-color--white .vc-swatches-pick{fill:#333}</style><style type="text/css">.vc-twitter{background:#fff;border:0 solid rgba(0,0,0,.25);border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.25);position:relative}.vc-twitter-triangle{border-color:transparent transparent #fff}.vc-twitter-triangle,.vc-twitter-triangle-shadow{border-style:solid;border-width:0 9px 10px;height:0;position:absolute;width:0}.vc-twitter-triangle-shadow{border-color:transparent transparent rgba(0,0,0,.1)}.vc-twitter-body{padding:15px 9px 9px 15px}.vc-twitter .vc-editable-input{position:relative}.vc-twitter .vc-editable-input input{border:0;border-radius:0 4px 4px 0;box-shadow:inset 0 0 0 1px #f0f0f0;box-sizing:content-box;color:#666;float:left;font-size:14px;height:28px;outline:none;padding:1px 1px 1px 8px;width:100px}.vc-twitter .vc-editable-input span{display:none}.vc-twitter-hash{align-items:center;background:#f0f0f0;border-radius:4px 0 0 4px;color:#98a1a4;display:flex;float:left;height:30px;justify-content:center;width:30px}.vc-twitter-swatch{border-radius:4px;cursor:pointer;float:left;height:30px;margin:0 6px 6px 0;outline:none;position:relative;width:30px}.vc-twitter-clear{clear:both}.vc-twitter-hide-triangle .vc-twitter-triangle,.vc-twitter-hide-triangle .vc-twitter-triangle-shadow{display:none}.vc-twitter-top-left-triangle .vc-twitter-triangle{left:12px;top:-10px}.vc-twitter-top-left-triangle .vc-twitter-triangle-shadow{left:12px;top:-11px}.vc-twitter-top-right-triangle .vc-twitter-triangle{right:12px;top:-10px}.vc-twitter-top-right-triangle .vc-twitter-triangle-shadow{right:12px;top:-11px}</style></head>
+	<body class="Body" marginwidth="0" marginheight="0">
+		 
+			<form name="Form_SD0104" method="post" action="./SD0104.aspx" id="Form_SD0104">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTgzNzE3NDUwMw8WCB4LQnV0dG9uUmlnaHQFBVksWSxZHhFHUkRfVHJhbnNpdFBhcmFtc2UeEkdSRF9QYXJlbnRTb3J0UGFnZQU/UGFyZW50U29ydFBhZ2U9R1JEX0N1clBhZ2UhITEqKkdSRF9Tb3J0Q29sdW1uISEqKkdSRF9Tb3J0RGlyISEmHgZHUkRfZHMyhxgAAQAAAP////8BAAAAAAAAAAwCAAAATlN5c3RlbS5EYXRhLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUBAAAAE1N5c3RlbS5EYXRhLkRhdGFTZXQDAAAAF0RhdGFTZXQuUmVtb3RpbmdWZXJzaW9uCVhtbFNjaGVtYQtYbWxEaWZmR3JhbQMBAQ5TeXN0ZW0uVmVyc2lvbgIAAAAJAwAAAAYEAAAAjwo8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtMTYiPz4NCjx4czpzY2hlbWEgaWQ9Ik5ld0RhdGFTZXQiIHhtbG5zPSIiIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJOZXdEYXRhU2V0IiBtc2RhdGE6SXNEYXRhU2V0PSJ0cnVlIiBtc2RhdGE6VXNlQ3VycmVudExvY2FsZT0idHJ1ZSI+DQogICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgPHhzOmNob2ljZSBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIj4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iR1JEIj4NCiAgICAgICAgICA8eHM6Y29tcGxleFR5cGU+DQogICAgICAgICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9InN0bm8iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9InNldHllYXIiIHR5cGU9InhzOmRlY2ltYWwiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJzZXR0ZXJtIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJjcmRfbnVtIiB0eXBlPSJ4czpkb3VibGUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJzY29yZSIgdHlwZT0ieHM6ZGVjaW1hbCIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9Im9yZGVyX25vIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJvcmRlcl9udW0iIHR5cGU9InhzOnN0cmluZyIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICA8L3hzOnNlcXVlbmNlPg0KICAgICAgICAgIDwveHM6Y29tcGxleFR5cGU+DQogICAgICAgIDwveHM6ZWxlbWVudD4NCiAgICAgIDwveHM6Y2hvaWNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCjwveHM6c2NoZW1hPgYFAAAAzws8ZGlmZmdyOmRpZmZncmFtIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtbXNkYXRhIiB4bWxuczpkaWZmZ3I9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLWRpZmZncmFtLXYxIj48TmV3RGF0YVNldD48R1JEIGRpZmZncjppZD0iR1JEMSIgbXNkYXRhOnJvd09yZGVyPSIwIj48c3Rubz5BMTExMjIzMDIyPC9zdG5vPjxzZXR5ZWFyPjExMTwvc2V0eWVhcj48c2V0dGVybT4xPC9zZXR0ZXJtPjxjcmRfbnVtPjIzPC9jcmRfbnVtPjxzY29yZT45MS4zPC9zY29yZT48b3JkZXJfbm8+MyAvIDMgLyA5PC9vcmRlcl9ubz48b3JkZXJfbnVtPjM4IC8gMzggLyAxNTQ8L29yZGVyX251bT48L0dSRD48R1JEIGRpZmZncjppZD0iR1JEMiIgbXNkYXRhOnJvd09yZGVyPSIxIj48c3Rubz5BMTExMjIzMDIyPC9zdG5vPjxzZXR5ZWFyPjExMTwvc2V0eWVhcj48c2V0dGVybT4yPC9zZXR0ZXJtPjxjcmRfbnVtPjIzPC9jcmRfbnVtPjxzY29yZT45My4wPC9zY29yZT48b3JkZXJfbm8+MiAvIDIgLyAyPC9vcmRlcl9ubz48b3JkZXJfbnVtPjM4IC8gMzggLyAxNTQ8L29yZGVyX251bT48L0dSRD48R1JEIGRpZmZncjppZD0iR1JEMyIgbXNkYXRhOnJvd09yZGVyPSIyIj48c3Rubz5BMTExMjIzMDIyPC9zdG5vPjxzZXR5ZWFyPjExMjwvc2V0eWVhcj48c2V0dGVybT4xPC9zZXR0ZXJtPjxjcmRfbnVtPjI1PC9jcmRfbnVtPjxzY29yZT45MS44PC9zY29yZT48b3JkZXJfbm8+MyAvIDMgLyA5PC9vcmRlcl9ubz48b3JkZXJfbnVtPjQwIC8gNDAgLyAxNjI8L29yZGVyX251bT48L0dSRD48R1JEIGRpZmZncjppZD0iR1JENCIgbXNkYXRhOnJvd09yZGVyPSIzIj48c3Rubz5BMTExMjIzMDIyPC9zdG5vPjxzZXR5ZWFyPjExMjwvc2V0eWVhcj48c2V0dGVybT4yPC9zZXR0ZXJtPjxjcmRfbnVtPjIyPC9jcmRfbnVtPjxzY29yZT45Ny4wPC9zY29yZT48b3JkZXJfbm8+MiAvIDIgLyAyPC9vcmRlcl9ubz48b3JkZXJfbnVtPjM5IC8gMzkgLyAxNjM8L29yZGVyX251bT48L0dSRD48R1JEIGRpZmZncjppZD0iR1JENSIgbXNkYXRhOnJvd09yZGVyPSI0Ij48c3Rubz5BMTExMjIzMDIyPC9zdG5vPjxzZXR5ZWFyPjExMzwvc2V0eWVhcj48c2V0dGVybT4xPC9zZXR0ZXJtPjxjcmRfbnVtPjE3PC9jcmRfbnVtPjxzY29yZT44NC40PC9zY29yZT48b3JkZXJfbm8+OSAvIDkgLyA2Mjwvb3JkZXJfbm8+PG9yZGVyX251bT4zOCAvIDM4IC8gMTYxPC9vcmRlcl9udW0+PC9HUkQ+PEdSRCBkaWZmZ3I6aWQ9IkdSRDYiIG1zZGF0YTpyb3dPcmRlcj0iNSI+PHN0bm8+QTExMTIyMzAyMjwvc3Rubz48c2V0eWVhcj4xMTM8L3NldHllYXI+PHNldHRlcm0+Mjwvc2V0dGVybT48Y3JkX251bT4xNzwvY3JkX251bT48c2NvcmU+ODEuNTwvc2NvcmU+PG9yZGVyX25vPjE0IC8gMTQgLyA5MTwvb3JkZXJfbm8+PG9yZGVyX251bT4zOCAvIDM4IC8gMTYwPC9vcmRlcl9udW0+PC9HUkQ+PC9OZXdEYXRhU2V0PjwvZGlmZmdyOmRpZmZncmFtPgQDAAAADlN5c3RlbS5WZXJzaW9uBAAAAAZfTWFqb3IGX01pbm9yBl9CdWlsZAlfUmV2aXNpb24AAAAACAgICAIAAAAAAAAA//////////8LFgICAQ9kFggCAQ9kFgJmD2QWAmYPDxYCHgRUZXh0BRJBMTExMjIzMDIyQFNUVURfRDFkZAIDDw8WBh4IQ3NzQ2xhc3MFCVRpdGxlRm9udB8EBXRBMjIzNDEmbmJzcOizh+euoeaZuue2suWbm+eUsiZuYnNwJm5ic3BBMTExMjIzMDIyJm5ic3Dos7TpgLjluq0mbmJzcCZuYnNwJm5ic3AmbmJzcOOAiuatt+W5tOWtuOacn+WAi+S6uuWQjeasoeihqOOAix4EXyFTQgICZGQCBQ9kFghmD2QWAmYPZBYCZg8PFgIfBAUhU0QwMTA0Leatt+W5tCjlrbjmnJ8p5ZCN5qyh5p+l6KmiZGQCAQ9kFgJmD2QWAmYPPCsACwEADxYIHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIGHglQYWdlQ291bnQCAR4VXyFEYXRhU291cmNlSXRlbUNvdW50AgZkFgJmD2QWDmYP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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form_SD0104'];
+if (!theForm) {
+    theForm = document.Form_SD0104;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/STU1/WebResource.axd?d=5ryEeClIKJGkNk-NfmAMD_RIXKn33SQoSIuJ-Bv3SwYNA_tVxrt_lq_bicmMmOx1NVa1pS11juEK1qZp31ysHjG9C-YO_TG832eMljeKEPQ1&amp;t=638568892371266408" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9DB2ACDE">
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0">
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+</div>
+				 
+ 
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody><tr>
+        <td>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                   
+                    <td class="c-fone01" valign="bottom" nowrap="nowrap" width="100%">
+                        <!--<font color="darkblue"> <span id="ctl04_lblKcname" style="font-weight:bold;">A111223022@STUD_D1</span>@EAS.SHU </font>-->
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+  </tr></tbody></table>  
+
+<script>var dataMenu = [{"label":"學籍作業","children":[{"href":"/STU1/STU1/SB0101.aspx","label":"SB0101-新生學籍記載表填報"},{"href":"/STU1/STU1/SB0102.aspx","label":"SB0102-學生通訊資料維護"},{"href":"/STU1/STU1/SB0104.aspx","label":"SB0104-輔系雙主修申請作業"},{"href":"/STU1/STU1/SB0110.aspx","label":"SB0110-學程申請作業"},{"href":"/STU1/STU1/SB0109.aspx","label":"SB0109-輔系雙主修學程資料查詢"},{"href":"/STU1/STU1/SB0108.aspx","label":"SB0108-在學證明書列印"},{"href":"/STU1/STU1/SB0107.aspx","label":"SB0107-離校手續資訊查詢"},{"href":"/STU1/STU1/SB0106.aspx","label":"SB0106-證明文件線上申請"}]},{"label":"課務作業","children":[{"href":"/STU1/STU1/SC0108.aspx","label":"SC0108-出缺勤記錄查詢"},{"href":"/STU1/STU1/SE0101.aspx","label":"SE0101-全校課程地圖(學生)"},{"href":"/STU1/stu1/SE0301.aspx","label":"SE0301-學生核心能力查詢"},{"href":"/STU1/STU1/SC0104.aspx","label":"SC0104-教師課外指導時間查詢"},{"href":"/STU1/STU1/SC0102.aspx","label":"SC0102-學期開課課程一覽表_查詢"},{"href":"/STU1/STU1/SC01023.aspx","label":"SC01023-學期開課一覽表-英文 Course Search"},{"href":"/STU1/STU1/SC0103.aspx","label":"SC0103-課程選修人數查詢"},{"href":"/STU1/STU1/SC0105.aspx","label":"SC0105-本學期選課結果確認"},{"href":"/STU1/STU1/SC0106.aspx","label":"SC0106-學生課表查詢"},{"href":"/STU1/STU1/SC0116.aspx","label":"SC0116-學生申請停修課設定"},{"href":"/STU1/STU1/SC0117.aspx","label":"SC0117-興趣體育課程期望開課調查"},{"href":"/STU1/STU1/SC0118.aspx","label":"SC0118-學生申請課程抵免設定"},{"href":"/STU1/STU1/SC0107.aspx","label":"SC0107-教室未使用查詢"},{"href":"/STU1/STU1/SL0101.aspx","label":"SL0101-已參加微學分課程查詢"},{"label":"學生專業教室借用","children":[{"href":"/STU1/STU1/SK0101.aspx","label":"SK0101-專業教室借用登記"},{"href":"/STU1/STU1/SK0102.aspx","label":"SK0102-專業教室借用查詢"}]},{"href":"/STU1/STU1/SC0109.aspx","label":"SC0109-考試座次查詢"},{"href":"/STU1/STU1/SC0113.aspx","label":"SC0113-曾經修習課程推薦"},{"href":"/STU1/STU1/SC0114.aspx","label":"SC0114-推薦課程統計查詢"},{"href":"/STU1/stu1/sc0301.aspx","label":"SC0301-課程加退選(陸生)"},{"href":"/STU1/STU1/SC0302.aspx","label":"SC0302-課程加退選(大一先修生)"},{"label":"TA輔導工作日誌","children":[{"href":"/STU1/stu1/SC0401.aspx","label":"SC0401-TA輔導與工作日誌"},{"href":"/STU1/stu1/SC0402.aspx","label":"SC0402-小老師輔導日誌"}]},{"href":"/STU1/STU1/SC0111.aspx","label":"SC0111-學生補課查詢"},{"href":"/STU1/STU1/SC0112.aspx","label":"SC0112-期中學習關懷追蹤查詢"}]},{"label":"成績作業","children":[{"href":"/STU1/STU1/SD0101.aspx","label":"SD0101-歷年成績查詢"},{"href":"/STU1/STU1/SD0104.aspx","label":"SD0104-歷年(學期)名次查詢"},{"href":"/STU1/STU1/SD0102.aspx","label":"SD0102-成績未到原因查詢"},{"href":"/STU1/STU1/SD0105.aspx","label":"SD0105-當學期學程課程與修過成績對照查詢"},{"href":"/STU1/STU1/SD0106.aspx","label":"SD0106-校定基本核心能力檢測查詢"}]},{"label":"會考與英檢作業","children":[{"label":"基本核心能力檢測","children":[{"href":"/STU1/STU1/SH0101.aspx","label":"SH0101-會考時段勾選"},{"href":"/STU1/STU1/SH0102.aspx","label":"SH0102-會考成績查詢"}]},{"href":"/STU1/STUF/SF01011.aspx","label":"SF01011-能力分班及大一會考成績查詢"},{"href":"/STU1/STUF/SF01021.aspx","label":"SF01021-大一會考結果查詢"},{"href":"/STU1/STUF/SF01051.aspx","label":"SF01051-英語檢測成績(統一會考)查詢"}]},{"label":"評鑑作業","children":[{"href":"/STU1/EASG/GB0101.aspx","label":"GB0101-學生問卷填寫作業"}]},{"label":"授權作業","children":[{"href":"/STU1/STU1/SB0201.aspx","label":"SB0201-設定是否同意家長查詢"}]}];</script>
+
+
+
+<script defer="defer" src="/STU1/js/chunk-vendors.b6cd9a5c.js"></script>
+<script defer="defer" src="/STU1/js/app.7e13789a.js"></script>
+<link href="/STU1/css/app.e9c48fc3.css" rel="stylesheet">
+<div id="app" style="background: white;" data-v-app=""><div class="tree_nav_bar"><ul><!----><div class="bar" data-v-424c5d0b=""><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">學籍作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SB0101-新生學籍記載表填報</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0102-學生通訊資料維護</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0104-輔系雙主修申請作業</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0110-學程申請作業</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0109-輔系雙主修學程資料查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0108-在學證明書列印</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0107-離校手續資訊查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SB0106-證明文件線上申請</span><!----><!----><!----><!----></div></div></div></div><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">課務作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SC0108-出缺勤記錄查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SE0101-全校課程地圖(學生)</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SE0301-學生核心能力查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0104-教師課外指導時間查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0102-學期開課課程一覽表_查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC01023-學期開課一覽表-英文 Course Search</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0103-課程選修人數查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0105-本學期選課結果確認</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0106-學生課表查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0116-學生申請停修課設定</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0117-興趣體育課程期望開課調查</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0118-學生申請課程抵免設定</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0107-教室未使用查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SL0101-已參加微學分課程查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">學生專業教室借用</span><!----><!----><span class="material-icons chevron">chevron_right</span><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SK0101-專業教室借用登記</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SK0102-專業教室借用查詢</span><!----><!----><!----><!----></div></div></div></div><div class="bar-menu-item"><!----><!----><span class="label">SC0109-考試座次查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0113-曾經修習課程推薦</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0114-推薦課程統計查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0301-課程加退選(陸生)</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0302-課程加退選(大一先修生)</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">TA輔導工作日誌</span><!----><!----><span class="material-icons chevron">chevron_right</span><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SC0401-TA輔導與工作日誌</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0402-小老師輔導日誌</span><!----><!----><!----><!----></div></div></div></div><div class="bar-menu-item"><!----><!----><span class="label">SC0111-學生補課查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SC0112-期中學習關懷追蹤查詢</span><!----><!----><!----><!----></div></div></div></div><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">成績作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SD0101-歷年成績查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SD0104-歷年(學期)名次查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SD0102-成績未到原因查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SD0105-當學期學程課程與修過成績對照查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SD0106-校定基本核心能力檢測查詢</span><!----><!----><!----><!----></div></div></div></div><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">會考與英檢作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">基本核心能力檢測</span><!----><!----><span class="material-icons chevron">chevron_right</span><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SH0101-會考時段勾選</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SH0102-會考成績查詢</span><!----><!----><!----><!----></div></div></div></div><div class="bar-menu-item"><!----><!----><span class="label">SF01011-能力分班及大一會考成績查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SF01021-大一會考結果查詢</span><!----><!----><!----><!----></div><div class="bar-menu-item"><!----><!----><span class="label">SF01051-英語檢測成績(統一會考)查詢</span><!----><!----><!----><!----></div></div></div></div><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">評鑑作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">GB0101-學生問卷填寫作業</span><!----><!----><!----><!----></div></div></div></div><div class="bar-button" data-v-424c5d0b=""><!----><!----><span class="label">授權作業</span><!----><!----><div class="bar-menu menu"><div class="extended-hover-zone"></div><div class="bar-menu-items" style="overflow: visible;"><div class="bar-menu-item"><!----><!----><span class="label">SB0201-設定是否同意家長查詢</span><!----><!----><!----><!----></div></div></div></div></div></ul><!----></div></div>
+
+				<table width="100%" border="0">
+					<tbody><tr>
+						<td valign="top">
+							<center><span id="HeadLabel1" class="TitleFont">A22341&nbsp;資管智網四甲&nbsp;&nbsp;A111223022&nbsp;賴逸庭&nbsp;&nbsp;&nbsp;&nbsp;《歷年學期個人名次表》</span></center>
+							<table id="GRD_FormTable" class="FormStyle" width="100%">
+	<tbody><tr>
+		<td id="GRD_FormTitle_td" class="FormTitleTd" colspan="13"><span id="GRD_FormTitle" class="FormTitleFont">SD0104-歷年(學期)名次查詢</span></td>
+	</tr>
+	<tr>
+		<td id="GRD_Content_td"><table class="FormStyle" cellspacing="0" rules="all" border="1" id="GRD_DataGrid" style="width:100%;border-collapse:collapse;">
+			<tbody><tr>
+				<td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_setyear" class="ListFont">學年度</span>
+													</td><td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_setterm" class="ListFont">學期</span>
+													</td><td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_crd_num" class="ListFont">學分</span>
+													</td><td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_score" class="ListFont">平均</span>
+													</td><td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_no" class="ListFont">名次 (班/組/系)</span>
+													</td><td class="ListTd">
+														<span id="GRD_DataGrid_ctl01_GRD_Column_num" class="ListFont">人數 (班/組/系)</span>
+													</td>
+			</tr><tr class="ContectTd">
+				<td>
+														<span id="GRD_DataGrid_ctl02_GRD_setyear" class="ContectFont">111</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl02_GRD_setterm" class="ContectFont">1</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl02_GRD_crd_num" class="ContectFont">23</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl02_GRD_score" class="ContectFont">91.3</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl02_GRD_no" class="ContectFont">3 / 3 / 9</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl02_GRD_num" class="ContectFont">38 / 38 / 154</span>
+													</td>
+			</tr><tr class="ContectTdX">
+				<td>
+														<span id="GRD_DataGrid_ctl03_GRD_setyear" class="ContectFontX">111</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl03_GRD_setterm" class="ContectFontX">2</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl03_GRD_crd_num" class="ContectFontX">23</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl03_GRD_score" class="ContectFontX">93.0</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl03_GRD_no" class="ContectFontX">2 / 2 / 2</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl03_GRD_num" class="ContectFontX">38 / 38 / 154</span>
+													</td>
+			</tr><tr class="ContectTd">
+				<td>
+														<span id="GRD_DataGrid_ctl04_GRD_setyear" class="ContectFont">112</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl04_GRD_setterm" class="ContectFont">1</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl04_GRD_crd_num" class="ContectFont">25</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl04_GRD_score" class="ContectFont">91.8</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl04_GRD_no" class="ContectFont">3 / 3 / 9</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl04_GRD_num" class="ContectFont">40 / 40 / 162</span>
+													</td>
+			</tr><tr class="ContectTdX">
+				<td>
+														<span id="GRD_DataGrid_ctl05_GRD_setyear" class="ContectFontX">112</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl05_GRD_setterm" class="ContectFontX">2</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl05_GRD_crd_num" class="ContectFontX">22</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl05_GRD_score" class="ContectFontX">97.0</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl05_GRD_no" class="ContectFontX">2 / 2 / 2</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl05_GRD_num" class="ContectFontX">39 / 39 / 163</span>
+													</td>
+			</tr><tr class="ContectTd">
+				<td>
+														<span id="GRD_DataGrid_ctl06_GRD_setyear" class="ContectFont">113</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl06_GRD_setterm" class="ContectFont">1</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl06_GRD_crd_num" class="ContectFont">17</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl06_GRD_score" class="ContectFont">84.4</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl06_GRD_no" class="ContectFont">9 / 9 / 62</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl06_GRD_num" class="ContectFont">38 / 38 / 161</span>
+													</td>
+			</tr><tr class="ContectTdX">
+				<td>
+														<span id="GRD_DataGrid_ctl07_GRD_setyear" class="ContectFontX">113</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl07_GRD_setterm" class="ContectFontX">2</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl07_GRD_crd_num" class="ContectFontX">17</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl07_GRD_score" class="ContectFontX">81.5</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl07_GRD_no" class="ContectFontX">14 / 14 / 91</span>
+													</td><td>
+														<span id="GRD_DataGrid_ctl07_GRD_num" class="ContectFontX">38 / 38 / 160</span>
+													</td>
+			</tr>
+		</tbody></table></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+	</tr>
+</tbody></table>
+
+							<span id="FooterLabel1" class="TitleFont">1. 該生至 113 學年第 2 學期止，累計班排名/班總人數： 5 / 38<br>2. 該生至 113 學年第 2 學期止，累計組排名/組總人數： 5 / 38<br>3. 該生至 113 學年第 2 學期止，累計系排名/系總人數： 11 / 160<br></span></td>
+					</tr>
+				</tbody></table>
+			
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+		 
+		<pre><font color="blue">●查詢限制說明：</font><br>				
+1﹒僅開放查詢：A、B 學制，身份為在校生 (stu_grp = '1')。<br>
+2﹒只顯示：1—4 年級成績，延修成績不顯示。<br>				
+</pre>
+	
+
+<script type="text/javascript" src="https://ap.shu.edu.tw/SSO/js/justFont.js"></script>
+</body></html>
